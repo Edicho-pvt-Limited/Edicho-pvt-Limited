@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edicho | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- fevicon icon -->
+  <link 
+    rel="icon" 
+    href="./Media/Image/Edicho Fevicon Logo.png" 
+    type="image/png"
+  >
+  
+  <!-- Stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <!-- navbar -->
+  <header id="navbar" class="top-navbar">
+    <div class="nav-left">
+      <a href="index.html" class="brand">
+        <img 
+          src="./Media/Image/Edicho Logo.png" 
+          alt="Edicho Logo" 
+          class="logo"
+        >
+        <div class="brand-text">
+          <span class="brand-name">EDICHO</span>
+          <div class="suffix-window">
+            <span id="dynamicSuffix" class="suffix-text">.com</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="nav-right">
+      <div class="menu-icon" id="menuIcon">☰</div>
+    </div>
+  </header>
+
+  <!-- side menu -->
+  <div id="sideMenu" class="side-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="sample.html">Sample</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- overlay (for outside click) -->
+  <div id="menuOverlay" class="menu-overlay"></div>
+
+  <!-- --------------------------------------- -->
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="edicho-hero" id="hero">
+    <div class="hero-bg-container">
+      <img 
+        src="./Media/Image/Edicho Index Page Hero Section Image.avif" 
+        class="hero-bg" 
+        alt="Edicho Studio Hero"
+      >
+      <div class="hero-overlay"></div>
+      <div class="hero-grain"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tag">EST. 2026 // DIGITAL LEGACY</div>
+    
+      <h1 class="hero-title">
+        <span class="title-line">WE BUILD BRANDS THAT</span>
+
+        <span class="title-line command-wrapper">
+          COMMAND <span id="dynamicCommand" class="word-active">ATTENTION</span>
+        </span>
+
+        <span class="title-line">IN A SILENT WORLD.</span>
+      </h1>
+
+      <p class="hero-sub">
+        High-fidelity storytelling and precision-engineered creative strategy. 
+        Defining the visual language of industry leaders.
+      </p>
+
+      <div class="scroll-wrapper" id="scrollTrigger">
+        <div class="cta-inner">
+          <span class="scroll-text">VIEW DIRECTORIAL WORK</span>
+          <span class="cta-arrow"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-footer-info">
+      <span>STUDIO EDITION // 01</span>
+    </div>
+</section>
+
+
+<!-- --------------------------------------- -->
+
+<!-- EDICHO OVERVIEW VIDEO SECTION -->
+<!-- VIDEO REVEAL SECTION -->
+<section class="expansion-wrapper" id="tutorial-video">
+  <div class="expansion-sticky">
+    <div class="bg-overlay"></div>
+    <div class="grain"></div>
+
+    <div class="video-capsule">
+      <video 
+        id="mainVideo"
+        class="showcase-video"
+        autoplay 
+        muted 
+        loop 
+        playsinline>
+        <source 
+          src="Media/Video/Edicho Private Limited Thumbnail Video Desktop View.mp4" 
+          type="video/mp4"
+        >
+      </video>
+
+      <div class="content-container">
+        <div class="glass-card">
+          <span class="tag">Edition 2026</span>
+          <h2 class="hero-title">
+            CRAFTING <br>
+            DIGITAL
+            <span class="outline">LEGACIES</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="video-controls">
+        <button id="playPauseBtn" class="control-btn" aria-label="Play/Pause">
+          <svg class="icon pause-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+          <svg class="icon play-icon" viewBox="0 0 35 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+
+        <button id="muteBtn" class="control-btn" aria-label="Mute/Unmute">
+          <svg class="icon unmute-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zM3 9v6h4l5 5V4L7 9H3z"/></svg>
+          <svg class="icon mute-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM3 9v6h4l5 5V4L7 9H3zm16.5-1.77c.45.2.85.48 1.22.81l-1.42 1.42C19.1 9.25 18.8 9.07 18.5 9V7.23zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+        </button>
+      </div>
+
+      <div class="video-overlay"></div>
+    </div>
+  </div>
+</section>
+
+<!-- --------------------------------------- -->
+
+<!-- EDICHO Company Partner -->
+<section class="elite-marquee" aria-label="Our Trusted Partners">
+  <p class="sub">DIGITAL GROWTH PARTNERS</p>
+  <h2 class="title">
+    Optimized to <span>Command Attention</span>
+    <br>
+    Across Every Platform
+  </h2>
+
+  <div class="marquee-container">
+    <div class="fade-overlay left"></div>
+    <div class="fade-overlay right"></div>
+
+    <div class="marquee-wrap">
+      <div class="track">
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho BUNA bag index page company partner section.jpeg" 
+            alt="BUNA Bag Partner Logo"
+          >
+        </div>
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho TARA Healthcare centre for plastic surgery & aesthetics index page company partner section.png" 
+            alt="TARA Healthcare Logo"
+          >
+        </div>
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho ARORA LEMON index page company partner section.jpeg" 
+            alt="Arora Lemon Logo"
+          >
+        </div>
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho ADVANCE decorative laminates index page company partner section.png" 
+            alt="Advance Laminates Logo"
+          >
+        </div>
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho Arna Dairy index page company partner section.jpeg" 
+            alt="Arna Dairy Logo"
+          >
+        </div>
+
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho BUNA bag index page company partner section.jpeg" 
+            alt="BUNA Bag Partner Logo"
+          >
+        </div>
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho TARA Healthcare centre for plastic surgery & aesthetics index page company partner section.png" 
+            alt="TARA Healthcare Logo"
+          >
+        </div>
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho ARORA LEMON index page company partner section.jpeg" 
+            alt="Arora Lemon Logo"
+          >
+        </div>
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho ADVANCE decorative laminates index page company partner section.png" 
+            alt="Advance Laminates Logo"
+          >
+        </div>
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho Arna Dairy index page company partner section.jpeg" 
+            alt="Arna Dairy Logo"
+          >
+        </div>
+
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho BUNA bag index page company partner section.jpeg" 
+            alt="BUNA Bag Partner Logo"
+          >
+        </div>
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho TARA Healthcare centre for plastic surgery & aesthetics index page company partner section.png" 
+            alt="TARA Healthcare Logo"
+          >
+        </div>
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho ARORA LEMON index page company partner section.jpeg" 
+            alt="Arora Lemon Logo"
+          >
+        </div>
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho ADVANCE decorative laminates index page company partner section.png" 
+            alt="Advance Laminates Logo"
+          >
+        </div>
+        <div class="pill">
+          <img 
+            src="./Media/Image/Edicho Arna Dairy index page company partner section.jpeg" 
+            alt="Arna Dairy Logo"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- --------------------------------------- -->
+
+<!-- EDICHO STATS SECTION -->
+<section class="stats-section fade-in">
+  <div class="stats-wrapper">
+
+    <div class="stat-card">
+      <h3 class="count" data-target="6">0</h3>
+      <p>Years of Experience</p>
+    </div>
+
+    <div class="stat-card">
+      <h3 class="count" data-target="7000">0</h3>
+      <p>Videos Edited</p>
+    </div>
+
+    <div class="stat-card">
+      <h3 class="count" data-target="1000">0</h3>
+      <p>AI Content Creation</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- --------------------------------------- -->
+
+<!-- EDICHO OVERVIEW SECTION -->
+<section class="about-style fade-in">
+  <div class="about-wrapper">
+
+    <!-- LEFT -->
+    <div class="about-left">
+      <h2>
+        About
+        <br>
+        <span class="accent">Edicho</span>
+      </h2>
+
+      <p class="small-text">
+        We focus on <span class="highlight">storytelling</span> and visual flow to make every video feel
+        <span class="highlight">meaningful</span> and professional.
+      </p>
+
+      <div class="about-quote">
+        “We don’t just edit videos — we shape stories that connect.”
+      </div>
+
+      <a href="about.html" class="about-btn">Learn More</a>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="about-right">
+      <p class="about-desc">
+        Edicho is a creative video editing studio driven by
+        <span class="highlight">cinematic storytelling</span>.
+        We craft engaging visual content through professional editing, color grading, and motion design for
+        <span class="highlight">creators and brands</span>.
+      </p>
+
+      <div class="about-media" id="videoBox">
+        <video class="video-preview" muted autoplay loop playsinline>
+          <source 
+            src="Media/Video/Edicho Editor Video.mp4" 
+            type="video/mp4"
+          >
+        </video>
+      <div class="play-overlay">▶</div>
+    </div>
+
+
+    <!-- VIDEO MODAL -->
+    <div class="video-modal" id="videoModal">
+      <div class="video-content">
+        <span class="close-video" id="closeVideo">✖</span>
+
+        <video id="aboutVideo" controls>
+          <source 
+            src="Media/Video/Edicho Editor Video.mp4" 
+            type="video/mp4"
+          >
+          Your browser does not support the video tag.
+        </video>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- --------------------------------------- -->
+
+<!-- WHY CHOOSE US SECTION -->
+<section class="bento-why">
+  <div class="bento-container">
+
+    <h2 class="bento-title">Why Choose Us</h2>
+
+    <div class="bento-grid">
+
+      <!-- BLOCK 1 (LARGE) -->
+      <div class="bento-box large">
+        <h3>Our Mission</h3>
+        <p>
+          We specialize in <strong>high-retention video editing</strong> that keeps viewers
+          watching longer, builds emotional connection, and boosts engagement across platforms.
+        </p>
+      </div>
+
+      <!-- BLOCK 2 (SMALL) -->
+      <div class="bento-box small">
+        <span class="icon">⚡</span>
+        <h4>Fast Turnaround</h4>
+        <p>24h delivery on priority projects.</p>
+      </div>
+
+      <!-- BLOCK 3 (SMALL) -->
+      <div class="bento-box small">
+        <span class="icon">🎨</span>
+        <h4>Expert Colorist</h4>
+        <p>Cinema-grade color and contrast.</p>
+      </div>
+
+      <!-- BLOCK 4 (MEDIUM) -->
+      <div class="bento-box medium">
+        <h3>500+</h3>
+        <p>Projects Delivered Successfully</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- --------------------------------------- -->
+
+<!-- SERVICES SECTION -->
+<section class="services-section fade-in">
+  <div class="services-wrapper">
+
+    <div class="services-header">
+      <h2>Our <span>Services</span></h2>
+      <p>We provide end-to-end video editing solutions for creators and brands.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🎬</div>
+        <h3>YouTube Video Editing</h3>
+        <p>
+          Clean cuts, smooth transitions, engaging pacing and optimized edits
+          designed to increase watch time and retention.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Reels & Shorts Editing</h3>
+        <p>
+          Fast-paced, trend-based short-form edits for Instagram, YouTube Shorts
+          and TikTok that grab attention instantly.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📢</div>
+        <h3>Promotional & Ad Videos</h3>
+        <p>
+          High-quality promotional videos for products and brands with
+          storytelling, motion graphics and visual impact.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎥</div>
+        <h3>Cinematic Editing</h3>
+        <p>
+          Story-driven cinematic edits with advanced color grading,
+          sound design and professional finishing.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- --------------------------------------- -->
+
+<!-- ------------ Our Process --------------- -->
+<section class="workflow-section">
+  <div class="workflow-container">
+
+    <div class="workflow-header">
+      <h2>Our <span>Process</span></h2>
+      <p>
+        A structured creative workflow built for clarity, speed, and cinematic quality.
+      </p>
+    </div>
+
+    <div class="workflow-grid">
+
+      <div class="workflow-card">
+        <div class="workflow-step">01</div>
+        <h3>Discovery & Strategy</h3>
+        <p>
+          We analyze your brand, audience, and objectives to define the creative direction.
+        </p>
+      </div>
+
+      <div class="workflow-card">
+        <div class="workflow-step">02</div>
+        <h3>Concept & Storyboard</h3>
+        <p>
+          Script flow, pacing, and visual structure are designed for maximum engagement.
+        </p>
+      </div>
+
+      <div class="workflow-card">
+        <div class="workflow-step">03</div>
+        <h3>Editing & Motion</h3>
+        <p>
+          Precision editing, transitions, color grading, and motion graphics bring the story alive.
+        </p>
+      </div>
+
+      <div class="workflow-card">
+        <div class="workflow-step">04</div>
+        <h3>Review & Refinement</h3>
+        <p>
+          Multiple review rounds ensure the output aligns perfectly with your expectations.
+        </p>
+      </div>
+
+      <div class="workflow-card">
+        <div class="workflow-step">05</div>
+        <h3>Final Delivery</h3>
+        <p>
+          Optimized exports delivered for all platforms — ready to publish and scale.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- --------------------------------------- -->
+
+<!-- ------------ Testimonials --------------- -->
+<section class="test-simple-testimonials">
+  <div class="test-container">
+    <h2 class="test-section-title">
+      What Our 
+      <span>Clients</span> 
+      Say
+    </h2>
+
+    <div class="test-testimonial-grid">
+
+      <div class="test-video-card" data-video="f6qC_fWvK4A">
+        <div class="test-thumbnail-box">
+          <img 
+            src="https://img.youtube.com/vi/f6qC_fWvK4A/maxresdefault.jpg"
+          >
+          <div class="test-play-overlay">
+            <div class="test-play-icon"></div>
+          </div>
+        </div>
+
+        <div class="test-card-info">
+          <p>"Their editing transformed our brand videos completely."</p>
+          <small>
+            <strong>BUNA BAGS</strong> 
+            // Marketing
+          </small>
+        </div>
+      </div>
+
+      <div class="test-video-card" data-video="mSQ9njEXHls">
+        <div class="test-thumbnail-box">
+          <img 
+            src="https://img.youtube.com/vi/mSQ9njEXHls/maxresdefault.jpg"
+          >
+          <div class="test-play-overlay">
+            <div class="test-play-icon"></div>
+          </div>
+        </div>
+
+        <div class="test-card-info">
+          <p>"The storytelling and pacing were exceptional."</p>
+          <small>
+            <strong>TARA HEALTHCARE</strong>
+             // Founder
+          </small>
+        </div>
+      </div>
+
+      <div class="test-video-card" data-video="YXeSavGkrM0">
+        <div class="test-thumbnail-box">
+          <img 
+            src="https://img.youtube.com/vi/YXeSavGkrM0/maxresdefault.jpg"
+          >
+          <div class="test-play-overlay">
+            <div class="test-play-icon"></div>
+          </div>
+        </div>
+
+        <div class="test-card-info">
+          <p>"Reliable partner with cinematic quality."</p>
+          <small>
+            <strong>ARORA LEMON</strong>
+             // CEO
+          </small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<div class="test-video-popup" id="test-videoPopup">
+  <div class="test-popup-backdrop"></div>
+
+  <div class="test-popup-container">
+    <button class="test-close-btn" id="test-closePopup">✕</button>
+
+    <div class="test-video-wrapper">
+      <iframe id="test-popupFrame" src="" allow="autoplay; fullscreen"></iframe>
+    </div>
+
+  </div>
+</div>
+
+<!-- --------------------------------------- -->
+
+<!-- ------------ Platforms we work for --------------- -->
+<section class="platform-marquee-section">
+  <div class="marquee-header">
+    <h3>Multi-Platform Authority</h3>
+    <h2>Optimized For <span class="accent-text">Every Screen</span></h2>
+  </div>
+
+  <div class="marquee-wrapper">
+    <div class="marquee-content">
+      <div class="platform-logo">
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" 
+          alt="YouTube"
+        >
+        <span>YouTube</span>
+      </div>
+      <div class="platform-logo">
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" 
+          alt="Instagram"
+        >
+        <span>Instagram</span>
+      </div>
+      <div class="platform-logo">
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" 
+          alt="TikTok"
+        >
+        <span>TikTok</span>
+      </div>
+      <div class="platform-logo">
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
+          alt="LinkedIn"
+        >
+        <span>LinkedIn</span>
+      </div>
+      <div class="platform-logo">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3291/3291695.png" 
+          alt="Twitter X"
+        >
+        <span>Twitter X</span>
+      </div>
+      <div class="platform-logo">
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/5968/5968812.png" 
+          alt="Twitch"
+        >
+        <span>Twitch</span>
+      </div>
+            
+      <div class="platform-logo">
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" 
+          alt="YouTube"
+        >
+        <span>YouTube</span>
+      </div>
+      <div class="platform-logo">
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" 
+          alt="Instagram"
+        >
+        <span>Instagram</span>
+      </div>
+      <div class="platform-logo">
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" 
+          alt="TikTok"
+        >
+        <span>TikTok</span>
+      </div>
+      <div class="platform-logo">
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
+          alt="LinkedIn"
+        >
+        <span>LinkedIn</span>
+      </div>
+      <div class="platform-logo">
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/3291/3291695.png" 
+          alt="Twitter X"
+        >
+        <span>Twitter X</span>
+      </div>
+      <div class="platform-logo">
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/5968/5968812.png" 
+          alt="Twitch"
+        >
+        <span>Twitch</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- --------------------------------------- -->
+
+<!-- ------------ footer --------------- -->
+<!-- ------------ FINAL CTA --------------- -->
+<section class="cta-section">
+  <div class="cta-card">
+    <div class="cta-content">
+      <h3 class="cta-mini-title">Next Step</h3>
+      <h2 class="cta-main-title">
+        Ready to elevate 
+        <span class="accent-text">your content?</span>
+      </h2>
+      <p class="cta-desc">
+        Let’s turn your vision into cinematic reality. High-retention editing is just a click away.
+      </p>
+      <a href="contact.html" class="cta-button">Contact Us Now</a>
+      <span class="cta-hint">Average response time: &lt; 12 hours</span>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-box brand-box">
+        <h2 class="footer-logo">
+          Edicho Studio
+          <span>.</span>
+        </h2>
+
+        <p>
+          Crafting high-retention cinematic content.
+          We transform your vision into visual masterpieces.
+        </p>
+
+        <div class="social-row">
+          <a href="#" class="social-icon yt">
+            <img 
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"
+            >
+          </a>
+          <a href="#" class="social-icon ig">
+            <img 
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+            >
+          </a>
+          <a href="#" class="social-icon li">
+            <img 
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+            >
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Company</h3>
+        <ul class="footer-links">
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./about.html">About</a>
+          </li>
+          <li>
+            <a href="./service.html">Services</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h3>Expertise</h3>
+        <ul class="footer-links">
+          <li>
+            <a href="./contact.html">Video Editing</a>
+          </li>
+          <li>
+            <a href="./contact.html">Color Grading</a>
+          </li>
+          <li>
+            <a href="./contact.html">Shorts & Reels</a>
+          </li>
+          <li>
+            <a href="./contact.html">Motion Graphics</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-box contact-box">
+        <h3>Get in Touch</h3>
+        <p>
+          Email: 
+          <a href="mailto:hello@edicho.com">hello@edicho.com</a>
+        </p>
+        <p>
+          Based in: 
+          <span>India // Worldwide</span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      © 2026 
+      <strong>Edicho Studio</strong>
+      . Crafted for Creators.
+    </p>
+  </div>
+
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

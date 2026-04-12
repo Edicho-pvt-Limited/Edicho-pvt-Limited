@@ -1,0 +1,946 @@
+/* ===============================
+   CONTACT HERO
+================================ */
+.contact-hero{
+  position:relative;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+  background:#fff;
+}
+
+/* ===============================
+   SUBTLE GRAIN TEXTURE
+================================ */
+.contact-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  opacity:.06;
+  animation:grainMove 8s linear infinite;
+  pointer-events:none;
+}
+
+@keyframes grainMove{
+  0%{transform:translate(0,0);}
+  25%{transform:translate(10px,-10px);}
+  50%{transform:translate(-8px,6px);}
+  75%{transform:translate(6px,10px);}
+  100%{transform:translate(0,0);}
+}
+
+/* ===============================
+   CONTENT
+================================ */
+.contact-content{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+  padding:0 20px;
+}
+
+/* Luxury Serif Heading */
+.contact-title{
+  font-family: "Times New Roman", serif;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  font-weight:700;
+  color:#000;
+  line-height:1;
+  letter-spacing:-1px;
+}
+
+/* italic stroke word */
+.contact-title em{
+  font-style:italic;
+  font-weight:400;
+  color:transparent;
+  -webkit-text-stroke:1px #000;
+}
+
+/* elegant divider */
+.divider{
+  width:120px;
+  height:1px;
+  background:#000;
+  margin:35px auto 25px;
+  opacity:.7;
+}
+
+/* subtext */
+.contact-sub{
+  font-size:clamp(1rem,2vw,1.25rem);
+  color:#555;
+  letter-spacing:.3px;
+  margin-bottom:50px;
+}
+
+/* ===============================
+   BUTTON (MAGNETIC)
+================================ */
+.magnetic-wrap{
+  display:inline-block;
+  position:relative;
+}
+
+.contact-btn{
+  border:none;
+  background:#000;
+  color:#fff;
+  padding:16px 42px;
+  border-radius:999px;
+  font-size:.95rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:transform .25s ease, box-shadow .3s ease;
+  position:relative;
+}
+
+.contact-btn:hover{
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media(max-width:768px){
+
+  .contact-title{
+    line-height:1.1;
+  }
+
+  .divider{
+    margin:25px auto 20px;
+  }
+
+  .contact-sub{
+    margin-bottom:35px;
+  }
+}
+
+/* ===============================
+   FORM SECTION
+================================ */
+/* ===============================
+SECTION LAYOUT
+================================ */
+
+:root{
+--accent:#111;
+--text:#222;
+--muted:#777;
+--border:#e5e5e5;
+}
+
+
+/* =================================
+SECTION LAYOUT
+================================= */
+
+.split-contact{
+display:flex;
+min-height:100svh;
+background:#fff;
+}
+
+
+/* =================================
+LEFT PANEL
+================================= */
+
+.left-panel{
+flex:1;
+position:relative;
+
+background:url('./Media/Image/Edicho Contact Form Form Section.avif')
+center/cover no-repeat;
+
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* overlay */
+
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.45);
+}
+
+
+/* LEFT CONTENT */
+
+.left-content{
+position:relative;
+color:#fff;
+max-width:520px;
+padding:50px;
+}
+
+.left-content h1{
+font-family:"Playfair Display",serif;
+font-size:clamp(2.2rem,4vw,4rem);
+line-height:1.1;
+margin-bottom:16px;
+}
+
+.left-content p{
+font-size:1.05rem;
+opacity:.9;
+line-height:1.6;
+}
+
+
+/* =================================
+RIGHT PANEL
+================================= */
+
+.right-panel{
+flex:1;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:#fff;
+
+padding:30px 40px;
+}
+
+/* FORM */
+
+.contact-form{
+width:100%;
+max-width:480px;
+}
+
+/* TITLE */
+
+.contact-form h2{
+font-family:"Playfair Display",serif;
+font-size:2rem;
+margin-bottom:20px;
+color:var(--text);
+}
+
+
+/* =================================
+INPUT GROUP
+================================= */
+
+.input-group{
+position:relative;
+margin-bottom:16px;
+}
+
+/* INPUTS */
+
+.input-group input,
+.input-group textarea,
+.input-group select{
+
+width:100%;
+
+border:none;
+border-bottom:2px solid var(--border);
+
+padding:9px 0;
+
+font-size:15px;
+
+background:transparent;
+outline:none;
+
+transition:.3s ease;
+}
+
+/* TEXTAREA */
+
+.input-group textarea{
+min-height:70px;
+resize:none;
+}
+
+
+/* LABEL */
+
+.input-group label{
+
+position:absolute;
+left:0;
+top:9px;
+
+color:var(--muted);
+
+pointer-events:none;
+
+transition:.3s ease;
+font-size:14px;
+}
+
+
+/* FOCUS STYLE */
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus{
+
+border-bottom-color:#000;
+}
+
+
+/* FLOAT LABEL */
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label,
+.input-group select:focus + label,
+.input-group select:valid + label{
+
+top:-12px;
+font-size:11px;
+color:#000;
+}
+
+
+/* =================================
+SELECT STYLE
+================================= */
+
+.select-wrap{
+position:relative;
+}
+
+.select-wrap select{
+appearance:none;
+cursor:pointer;
+}
+
+.select-wrap::after{
+
+content:"⌄";
+
+position:absolute;
+right:0;
+top:8px;
+
+font-size:18px;
+color:#666;
+pointer-events:none;
+}
+
+
+/* =================================
+BUTTON
+================================= */
+
+button{
+
+width:100%;
+padding:14px;
+
+border:none;
+
+background:#111;
+color:#fff;
+
+font-weight:700;
+letter-spacing:.8px;
+
+cursor:pointer;
+
+border-radius:6px;
+
+transition:.35s cubic-bezier(.22,1,.36,1);
+}
+
+button:hover{
+
+background:#000;
+
+transform:translateY(-2px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+
+/* =================================
+RESPONSIVE
+================================= */
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+.split-contact{
+flex-direction:column;
+}
+
+.left-panel{
+min-height:42vh;
+}
+
+.right-panel{
+padding:50px 28px;
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.left-content{
+padding:40px 22px;
+}
+
+.left-content h1{
+font-size:1.9rem;
+}
+
+.contact-form h2{
+font-size:1.8rem;
+}
+
+.right-panel{
+padding:36px 18px;
+}
+
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:360px){
+
+.contact-form h2{
+font-size:1.5rem;
+}
+
+}
+
+
+/* =================================
+FORM SUCCESS POPUP
+================================= */
+
+.form-popup{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.6);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+opacity:0;
+pointer-events:none;
+
+transition:.35s;
+
+z-index:9999;
+}
+
+/* ACTIVE */
+
+.form-popup.active{
+opacity:1;
+pointer-events:auto;
+}
+
+
+/* POPUP BOX */
+
+.popup-box{
+
+background:#fff;
+
+padding:35px 32px;
+
+border-radius:12px;
+
+text-align:center;
+
+max-width:420px;
+width:90%;
+
+box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
+
+/* TITLE */
+
+.popup-box h3{
+font-size:22px;
+margin-bottom:8px;
+}
+
+/* TEXT */
+
+.popup-box p{
+color:#666;
+margin-bottom:18px;
+}
+
+/* BUTTON */
+
+.popup-box button{
+
+padding:10px 20px;
+
+border:none;
+
+background:#111;
+color:#fff;
+
+cursor:pointer;
+
+border-radius:5px;
+}
+
+
+/* ===============================
+   CONTACT SECTION
+================================ */
+/* ===============================
+   SECTION
+================================ */
+.direct-contact{
+  background:#fff;
+  padding:100px 20px;
+}
+
+.contact-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+/* ===============================
+   CARD
+================================ */
+.contact-card{
+  text-decoration:none;
+  color:inherit;
+
+  background:#fff;
+  border:1px solid #e8e8e8;
+  border-radius:24px;
+  padding:35px 30px;
+  text-align:left;
+
+  transition:all .35s cubic-bezier(.22,1,.36,1);
+  cursor:pointer;
+}
+
+.contact-card:hover{
+  transform:translateY(-8px);
+  box-shadow:
+    0 12px 35px rgba(100,130,255,.12),
+    0 4px 12px rgba(100,130,255,.08);
+  border-color:#dce6ff;
+}
+
+/* ===============================
+   ICON
+================================ */
+.icon{
+  font-size:28px;
+  color:#444;
+  margin-bottom:18px;
+  transition:.3s;
+}
+
+.contact-card:hover .icon{
+  color:#4f7cff;
+}
+
+/* ===============================
+   TEXT
+================================ */
+.contact-card h3{
+  font-size:1.2rem;
+  font-weight:700;
+  margin-bottom:8px;
+  color:#111;
+}
+
+.contact-card p{
+  color:#777;
+  font-size:.95rem;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media(max-width:768px){
+
+  .direct-contact{
+    padding:70px 16px;
+  }
+
+  .contact-card{
+    padding:28px 22px;
+  }
+}
+
+/* ===============================
+   Process SECTION
+================================ */
+/* ===============================
+   SECTION
+================================ */
+.process-section{
+  background:#fff;
+  padding:110px 20px;
+  text-align:center;
+}
+
+.process-title{
+  font-size:2rem;
+  font-weight:700;
+  margin-bottom:70px;
+  color:#111;
+  font-family:Arial, sans-serif;
+}
+
+/* ===============================
+   TIMELINE
+================================ */
+.timeline{
+  position:relative;
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+/* dashed base line */
+.line-base{
+  position:absolute;
+  top:72px;
+  left:8%;
+  width:84%;
+  border-top:2px dashed #ddd;
+  z-index:1;
+}
+
+/* animated fill */
+.line-fill{
+  position:absolute;
+  top:72px;
+  left:8%;
+  width:0%;
+  border-top:2px dashed #FF3E00;
+  z-index:2;
+  transition:width 1.5s ease;
+}
+
+/* ===============================
+   STEP
+================================ */
+.step{
+  position:relative;
+  width:30%;
+  z-index:3;
+}
+
+.step h3{
+  font-size:1.1rem;
+  font-weight:700;
+  margin-bottom:18px;
+  color:#111;
+}
+
+.step p{
+  margin-top:18px;
+  font-size:.9rem;
+  color:#888;
+  line-height:1.4;
+}
+
+/* ===============================
+   NODE
+================================ */
+.node{
+  width:64px;
+  height:64px;
+  margin:auto;
+  border:1px solid #ddd;
+  border-radius:50%;
+  background:#fff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  transform:scale(.7);
+  opacity:0;
+  transition:.5s cubic-bezier(.22,1,.36,1);
+}
+
+.icon{
+  font-size:24px;
+  color:#111;
+}
+
+/* pop animation active */
+.step.active .node{
+  transform:scale(1);
+  opacity:1;
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media(max-width:900px){
+
+  .timeline{
+    flex-direction:column;
+    gap:50px;
+    align-items:center;
+  }
+
+  .line-base,
+  .line-fill{
+    display:none;
+  }
+
+  .step{
+    width:100%;
+    max-width:300px;
+  }
+}
+
+/* ===============================
+   Business Availability
+================================ */
+/* ===============================
+   SECTION
+================================ */
+.availability-section{
+  background:#fff;
+  padding:80px 20px;
+  display:flex;
+  justify-content:center;
+}
+
+/* ===============================
+   CARD
+================================ */
+.availability-card{
+  width:100%;
+  max-width:750px;
+  background:#fff;
+  border:1px solid #ececec;
+  border-radius:16px;
+  padding:28px 30px;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,.04);
+
+}
+
+/* ===============================
+   LIVE STATUS
+================================ */
+.status-header{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:28px;
+}
+
+.live-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#2ecc71;
+  position:relative;
+}
+
+/* pulse animation */
+.live-dot::after{
+  content:"";
+  position:absolute;
+  inset:-6px;
+  border-radius:50%;
+  background:rgba(46,204,113,.35);
+  animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+  0%{
+    transform:scale(1);
+    opacity:1;
+  }
+  100%{
+    transform:scale(2.4);
+    opacity:0;
+  }
+}
+
+.status-text{
+  font-size:15px;
+  font-weight:600;
+  color:#111;
+  font-family:Arial, sans-serif;
+}
+
+/* ===============================
+   BODY
+================================ */
+.availability-body{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+/* info boxes */
+.info-box{
+  background:#fafafa;
+  border:1px solid #f1f1f1;
+  border-radius:12px;
+  padding:22px;
+}
+
+.icon{
+  font-size:26px;
+  margin-bottom:12px;
+  color:#111;
+}
+
+.info-box h3{
+  font-size:15px;
+  font-weight:700;
+  margin-bottom:6px;
+  color:#111;
+}
+
+.info-box p{
+  font-size:14px;
+  color:#777;
+  line-height:1.4;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media(max-width:768px){
+
+  .availability-body{
+    grid-template-columns:1fr;
+  }
+
+  .availability-card{
+    padding:22px;
+  }
+}
+
+/* ===============================
+   Business Availability
+================================ */
+/* ===============================
+   SECTION
+================================ */
+.social-row{
+  background:#fff;
+  padding:90px 20px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+/* ===============================
+   ITEM
+================================ */
+.social-item{
+  text-decoration:none;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+
+  transition:transform .35s cubic-bezier(.22,1,.36,1);
+}
+
+/* ===============================
+   ICON STYLE
+================================ */
+.icon{
+  width:42px;
+  height:42px;
+
+  stroke:#333;
+  fill:none;
+  stroke-width:2.2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+
+  transition:all .35s cubic-bezier(.22,1,.36,1);
+}
+
+/* hover animation */
+.social-item:hover{
+  transform:scale(1.1);
+}
+
+/* BRAND COLOR REVEAL */
+.instagram:hover .icon{
+  stroke:#E1306C;
+}
+
+.youtube:hover .icon{
+  stroke:#FF3E00;
+}
+
+.linkedin:hover .icon{
+  stroke:#0077B5;
+}
+
+/* ===============================
+   LABELS
+================================ */
+.social-item span{
+  font-family:Arial, sans-serif;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:2px;
+  color:#666;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media(max-width:768px){
+
+  .social-row{
+    gap:35px;
+    padding:70px 15px;
+  }
+
+  .icon{
+    width:36px;
+    height:36px;
+  }
+}

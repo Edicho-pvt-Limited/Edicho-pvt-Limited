@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edicho | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- fevicon icon -->
+  <link rel="icon" href="./Media/Image/Edicho Fevicon Logo.png" type="image/png">
+  
+  <!-- Stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sample.css">
+</head>
+<body>
+  <!-- navbar -->
+  <header id="navbar" class="top-navbar">
+    <div class="nav-left">
+      <a href="index.html" class="brand">
+        <img src="./Media/Image/Edicho Logo.png" alt="Edicho Logo" class="logo">
+        <div class="brand-text">
+          <span class="brand-name">EDICHO</span>
+          <div class="suffix-window">
+            <span id="dynamicSuffix" class="suffix-text">.com</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="nav-right">
+      <div class="menu-icon" id="menuIcon">☰</div>
+    </div>
+  </header>
+
+  <!-- side menu -->
+  <div id="sideMenu" class="side-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="sample.html">Sample</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- overlay (for outside click) -->
+  <div id="menuOverlay" class="menu-overlay"></div>
+
+  <!-- --------------------------------------- -->
+
+<!-- ================= SHOWREEL HERO ================= -->
+<section class="showreel-hero">
+
+  <video class="showreel-bg-video" autoplay muted loop playsinline>
+    <source src="Media/Video/Edicho Sample Webpage Video.mp4" type="video/mp4">
+  </video>
+
+  <div class="showreel-overlay"></div>
+
+  <div class="showreel-content">
+
+    <span class="showreel-label">SAMPLES</span>
+
+    <h1 class="showreel-title">OUR WORK</h1>
+
+    <p class="showreel-tagline">
+      See the Quality That Drives Results
+    </p>
+
+    <!-- BUTTON NOW SCROLLS DOWN -->
+    <button class="showreel-scroll-btn" id="scrollToSamples">
+      Explore Work ↓
+    </button>
+
+  </div>
+</section>
+
+  <!-- --------------------------------------- -->
+
+<!-- ================= FEATURED WORK ================= -->
+<section class="featured-work" id="samplesSection">
+  <div class="fw-container">
+
+    <!-- MAIN VIDEO -->
+    <div class="fw-main" id="fwMain" data-video="7h9PFGGLqJo">
+      <div class="fw-media">
+        <img id="fwMainThumb"
+          src="https://img.youtube.com/vi/7h9PFGGLqJo/maxresdefault.jpg"
+          alt="Featured Video">
+        <div class="fw-play">
+          <div class="play-icon">▶</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDE CONTENT -->
+    <div class="fw-side">
+      <div class="fw-details">
+        <span class="fw-tag">Top Performance</span>
+        <h2 id="fwTitle">Project Zero</h2>
+        <p id="fwDesc">
+          High-Retention YouTube Intro designed for engagement.
+        </p>
+      </div>
+
+      <div class="fw-thumbs">
+        <div class="fw-thumb active"
+          data-video="7h9PFGGLqJo"
+          data-title="Project Zero"
+          data-desc="High-Retention YouTube Intro designed for engagement.">
+          <img src="https://img.youtube.com/vi/7h9PFGGLqJo/mqdefault.jpg">
+        </div>
+
+        <div class="fw-thumb"
+          data-video="mSQ9njEXHls"
+          data-title="Creator Growth Edit"
+          data-desc="Optimized edit for retention curve.">
+          <img src="https://img.youtube.com/vi/mSQ9njEXHls/mqdefault.jpg">
+        </div>
+
+        <div class="fw-thumb"
+          data-video="YXeSavGkrM0"
+          data-title="Brand Launch Reel"
+          data-desc="High-impact cinematic intro.">
+          <img src="https://img.youtube.com/vi/YXeSavGkrM0/mqdefault.jpg">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- --------------------------------------- -->
+
+<!-- ================= REEL SHOWCASE ================= -->
+<section class="reel-showcase">
+
+  <div class="reel-header">
+    <h2>High-Impact Reel Edits</h2>
+    <div class="swipe-indicator">
+      <span>Swipe to Explore</span>
+      <div class="arrow"></div>
+    </div>
+  </div>
+
+  <div class="reel-row">
+
+    <!-- 1 -->
+    <div class="reel-phone" data-video="7h9PFGGLqJo">
+      <span class="reel-badge">10k to 100k Growth</span>
+      <div class="phone-frame">
+        <img src="https://img.youtube.com/vi/7h9PFGGLqJo/maxresdefault.jpg">
+        <div class="reel-play">▶</div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="reel-phone" data-video="mSQ9njEXHls">
+      <span class="reel-badge">Viral Hook Edit</span>
+      <div class="phone-frame">
+        <img src="https://img.youtube.com/vi/mSQ9njEXHls/maxresdefault.jpg">
+        <div class="reel-play">▶</div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="reel-phone" data-video="YXeSavGkrM0">
+      <span class="reel-badge">Brand Story Reel</span>
+      <div class="phone-frame">
+        <img src="https://img.youtube.com/vi/YXeSavGkrM0/maxresdefault.jpg">
+        <div class="reel-play">▶</div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="reel-phone" data-video="7h9PFGGLqJo">
+      <span class="reel-badge">UGC Ad Style</span>
+      <div class="phone-frame">
+        <img src="https://img.youtube.com/vi/7h9PFGGLqJo/maxresdefault.jpg">
+        <div class="reel-play">▶</div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="reel-phone" data-video="mSQ9njEXHls">
+      <span class="reel-badge">Retention Boost</span>
+      <div class="phone-frame">
+        <img src="https://img.youtube.com/vi/mSQ9njEXHls/maxresdefault.jpg">
+        <div class="reel-play">▶</div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="reel-phone" data-video="YXeSavGkrM0">
+      <span class="reel-badge">Creator Reels</span>
+      <div class="phone-frame">
+        <img src="https://img.youtube.com/vi/YXeSavGkrM0/maxresdefault.jpg">
+        <div class="reel-play">▶</div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="reel-phone" data-video="7h9PFGGLqJo">
+      <span class="reel-badge">Fast Cut Style</span>
+      <div class="phone-frame">
+        <img src="https://img.youtube.com/vi/7h9PFGGLqJo/maxresdefault.jpg">
+        <div class="reel-play">▶</div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- --------------------------------------- -->
+
+<!-- ================= LONG VIDEO ================= -->
+<section class="lfm-section">
+
+  <div class="lfm-container">
+
+    <div class="lfm-header">
+      <h2>Long-Form Mastery</h2>
+      <p>Precision storytelling for high-retention long-form content.</p>
+    </div>
+
+    <div class="lfm-grid">
+
+      <!-- VIDEO 1 -->
+      <div class="lfm-card">
+        <div class="lfm-media" data-video="7h9PFGGLqJo">
+          <img src="https://img.youtube.com/vi/7h9PFGGLqJo/maxresdefault.jpg" alt="Documentary Style">
+          <div class="lfm-play">▶</div>
+        </div>
+
+        <div class="lfm-content">
+          <h3>Founder Story Documentary</h3>
+          <span class="lfm-category">Documentary Style</span>
+          <button class="lfm-cta">View Case Study</button>
+        </div>
+      </div>
+
+      <!-- VIDEO 2 -->
+      <div class="lfm-card">
+        <div class="lfm-media" data-video="mSQ9njEXHls">
+          <img src="https://img.youtube.com/vi/mSQ9njEXHls/maxresdefault.jpg" alt="Business Podcast">
+          <div class="lfm-play">▶</div>
+        </div>
+
+        <div class="lfm-content">
+          <h3>High-Impact Business Podcast</h3>
+          <span class="lfm-category">Business Podcast</span>
+          <button class="lfm-cta">View Case Study</button>
+        </div>
+      </div>
+
+      <!-- VIDEO 3 -->
+      <div class="lfm-card">
+        <div class="lfm-media" data-video="YXeSavGkrM0">
+          <img src="https://img.youtube.com/vi/YXeSavGkrM0/maxresdefault.jpg" alt="Interview Series">
+          <div class="lfm-play">▶</div>
+        </div>
+
+        <div class="lfm-content">
+          <h3>Executive Interview Series</h3>
+          <span class="lfm-category">Interview Format</span>
+          <button class="lfm-cta">View Case Study</button>
+        </div>
+      </div>
+
+      <!-- VIDEO 4 -->
+      <div class="lfm-card">
+        <div class="lfm-media" data-video="7h9PFGGLqJo">
+          <img src="https://img.youtube.com/vi/7h9PFGGLqJo/maxresdefault.jpg" alt="YouTube Strategy">
+          <div class="lfm-play">▶</div>
+        </div>
+
+        <div class="lfm-content">
+          <h3>YouTube Growth Strategy Edit</h3>
+          <span class="lfm-category">YouTube Long-Form</span>
+          <button class="lfm-cta">View Case Study</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- --------------------------------------- -->
+
+<!-- ================= UGC & Ad Samples ================= -->
+<section class="video-marquee-section">
+  <div class="video-header">
+    <h2>FEATURED VISUAL STORIES</h2>
+    <p>Premium cinematic craftsmanship by Edicho</p>
+  </div>
+
+  <div class="marquee-wrapper">
+    <div class="video-track">
+      <div class="video-card"><img src="./Media/Image/Edicho Sample Page Thumbnail image 1.jpg"><div class="video-overlay"><span>THE NARRATIVE JOURNEY</span></div></div>
+      <div class="video-card"><img src="./Media/Image/Edicho Sample Page Thumbnail image 2.jpg"><div class="video-overlay"><span>INNOVATION SPOTLIGHT</span></div></div>
+      <div class="video-card"><img src="./Media/Image/Edicho Sample Page Thumbnail image 1.jpg"><div class="video-overlay"><span>BRAND EXPERIENCE</span></div></div>
+      <div class="video-card"><img src="./Media/Image/Edicho Sample Page Thumbnail image 2.jpg"><div class="video-overlay"><span>HUMAN STORIES</span></div></div>
+      <div class="video-card"><img src="./Media/Image/Edicho Sample Page Thumbnail image 1.jpg"><div class="video-overlay"><span>TECH VISUALS</span></div></div>
+      
+      <div class="video-card"><img src="./Media/Image/Edicho Sample Page Thumbnail image 2.jpg"><div class="video-overlay"><span>THE NARRATIVE JOURNEY</span></div></div>
+      <div class="video-card"><img src="./Media/Image/Edicho Sample Page Thumbnail image 1.jpg"><div class="video-overlay"><span>INNOVATION SPOTLIGHT</span></div></div>
+      <div class="video-card"><img src="./Media/Image/Edicho Sample Page Thumbnail image 2.jpg"><div class="video-overlay"><span>BRAND EXPERIENCE</span></div></div>
+      <div class="video-card"><img src="./Media/Image/Edicho Sample Page Thumbnail image 1.jpg"><div class="video-overlay"><span>HUMAN STORIES</span></div></div>
+      <div class="video-card"><img src="./Media/Image/Edicho Sample Page Thumbnail image 2.jpg"><div class="video-overlay"><span>TECH VISUALS</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- --------------------------------------- -->
+
+<!-- ------------ footer --------------- -->
+<!-- ------------ FINAL CTA --------------- -->
+<section class="cta-section">
+  <div class="cta-card">
+    <div class="cta-content">
+      <h3 class="cta-mini-title">Next Step</h3>
+      <h2 class="cta-main-title">Ready to elevate <span class="accent-text">your content?</span></h2>
+      <p class="cta-desc">
+        Let’s turn your vision into cinematic reality. High-retention editing is just a click away.
+      </p>
+      <a href="contact.html" class="cta-button">Contact Us Now</a>
+      <span class="cta-hint">Average response time: &lt; 12 hours</span>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-box brand-box">
+        <h2 class="footer-logo">Edicho Studio<span>.</span></h2>
+
+        <p>
+          Crafting high-retention cinematic content.
+          We transform your vision into visual masterpieces.
+        </p>
+
+        <div class="social-row">
+          <a href="#" class="social-icon yt">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg">
+          </a>
+          <a href="#" class="social-icon ig">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
+          </a>
+          <a href="#" class="social-icon li">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Company</h3>
+        <ul class="footer-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./service.html">Services</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h3>Expertise</h3>
+        <ul class="footer-links">
+          <li><a href="./contact.html">Video Editing</a></li>
+          <li><a href="./contact.html">Color Grading</a></li>
+          <li><a href="./contact.html">Shorts & Reels</a></li>
+          <li><a href="./contact.html">Motion Graphics</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box contact-box">
+        <h3>Get in Touch</h3>
+        <p>Email: <a href="mailto:hello@edicho.com">hello@edicho.com</a></p>
+        <p>Based in: <span>India // Worldwide</span></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 <strong>Edicho Studio</strong>. Crafted for Creators.</p>
+  </div>
+
+</footer>
+
+<script src="sample.js"></script>
+</body>
+</html>
