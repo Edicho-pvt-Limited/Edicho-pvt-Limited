@@ -135,6 +135,13 @@
   gap: 50px;
 }
 
+.trust-line {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 1px;
+}
+
 .stat-card {
   background: #ffffff;
   border-radius: 20px;
