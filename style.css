@@ -277,6 +277,11 @@ text-align:center;
 overflow:hidden;
 }
 
+.seo-heading {
+  position: absolute;
+  left: -9999px;
+}
+
 /* =================================
 BACKGROUND
 ================================= */
