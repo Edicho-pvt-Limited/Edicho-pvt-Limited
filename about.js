@@ -137,23 +137,31 @@ elements.forEach(el => observer.observe(el));
 const counters = document.querySelectorAll(".stat-number");
 
   if (counters.length) {
-    counters.forEach(counter => {
-      const target = Number(counter.dataset.target);
-      let count = 0;
-      const speed = Math.max(target / 80, 1); // safety
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = Number(counter.dataset.target);
+          let count = 0;
+          const speed = Math.max(target / 80, 1);
 
-      function updateCount() {
-        count += speed;
-        if (count < target) {
-          counter.innerText = Math.ceil(count);
-          requestAnimationFrame(updateCount);
-        } else {
-          counter.innerText = target;
+          function updateCount() {
+            count += speed;
+            if (count < target) {
+              counter.innerText = Math.ceil(count);
+              requestAnimationFrame(updateCount);
+            } else {
+              counter.innerText = target;
+            }
+          }
+
+          updateCount();
+          counterObserver.unobserve(counter);
         }
-      }
+      });
+    }, { threshold: 0.5 });
 
-      updateCount();
-    });
+    counters.forEach(counter => counterObserver.observe(counter));
   }
 // =========================================================
 
