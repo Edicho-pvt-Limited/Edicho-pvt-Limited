@@ -3,13 +3,23 @@
 
   <url>
     <loc>https://edicho.com/</loc>
-    <lastmod>2026-04-13</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://edicho.com/index.html</loc>
-    <priority>0.8</priority>
+    <loc>https://edicho.com/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://edicho.com/contact.html</loc>
+  </url>
+
+  <url>
+    <loc>https://edicho.com/service.html</loc>
+  </url>
+
+  <url>
+    <loc>https://edicho.com/sample.html</loc>
   </url>
 
 </urlset>
