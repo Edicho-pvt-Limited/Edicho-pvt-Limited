@@ -878,35 +878,12 @@
   pointer-events:none;
 }
 
-@keyframes shineSweep{
-  0%{
-    transform:translateX(-100%);
-    opacity:0;
-  }
-  50%{
-    opacity:1;
-  }
-  100%{
-    transform:translateX(100%);
-    opacity:0;
-  }
-}
 /* ================= CONTINUOUS CARD MOTION ================= */
 
 .usp-card{
   animation:
     cardReveal 0.9s ease forwards,
     cardBreath 6s ease-in-out infinite;
-}
-
-/* Slight breathing motion */
-@keyframes cardBreath{
-  0%,100%{
-    transform:translateY(0);
-  }
-  50%{
-    transform:translateY(-6px);
-  }
 }
 
 /* ================= ICON CONTINUOUS FLOAT ================= */
