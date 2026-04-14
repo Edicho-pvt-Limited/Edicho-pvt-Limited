@@ -18,6 +18,13 @@
   z-index:2;
 }
 
+.seo-text {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  opacity: 0.9;
+}
+
 /* SMALL RED LABEL */
 .services-eyebrow{
   font-family:'Montserrat',sans-serif;
