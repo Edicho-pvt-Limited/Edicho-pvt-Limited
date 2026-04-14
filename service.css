@@ -6,7 +6,7 @@
   display:flex;
   align-items:center;
   justify-content:center;
-  background:#ffffff;
+  background:linear-gradient(180deg,#ffffff 60%,#fafafa 100%);
   overflow:hidden;
   text-align:center;
   padding:120px 6%;
@@ -32,8 +32,8 @@
 /* MAIN HEADLINE */
 .services-headline{
   font-family:'Playfair Display',serif;
-  font-size:clamp(42px,5vw,64px);
-  line-height:1.15;
+  font-size:clamp(36px,4.5vw,56px);
+  line-height:1.2;
   color:#111;
   margin-bottom:40px;
 }
@@ -145,8 +145,8 @@
 }
 
 .service-card:hover{
-  box-shadow:0 18px 45px rgba(0,0,0,0.08);
-  transform:translateY(-4px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.1);
+  transform:translateY(-6px);
 }
 
 /* ICON */
@@ -422,7 +422,7 @@
 .lfp-visual img{
   width:100%;
   border-radius:14px;
-  filter:blur(2px);
+  filter:brightness(.9);
 }
 
 /* RIGHT */
@@ -772,6 +772,7 @@
   font-size:40px;
   font-weight:700;
   margin-bottom:25px;
+  letter-spacing:1px;
 }
 
 .price span{
