@@ -38,6 +38,18 @@
   margin-bottom:40px;
 }
 
+.services-headline span{
+  color:#d32f2f;
+  font-style:italic;
+}
+
+.services-sub{
+  font-family:'Poppins',sans-serif;
+  color:#666;
+  margin-top:-20px;
+  margin-bottom:30px;
+}
+
 /* GHOST CTA */
 .services-cta{
   display:inline-block;
