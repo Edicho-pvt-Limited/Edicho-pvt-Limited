@@ -164,6 +164,8 @@
   letter-spacing:1px;
   cursor:pointer;
   transition:.3s ease;
+  font-weight:600;
+  letter-spacing:1px;
 }
 
 .showreel-scroll-btn:hover{
