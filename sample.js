@@ -149,7 +149,7 @@ if (scrollBtn && samplesSection) {
 
 // =====================================================
 
-// ================= FEATURED WORK ======================
+// ================= Long Video Sample Work ======================
 const main = document.getElementById("fwMain");
 const thumbs = document.querySelectorAll(".fw-thumb");
 const title = document.getElementById("fwTitle");
@@ -238,6 +238,85 @@ if (main && thumbs.length) {
 
 }
 
+let progressInterval;
+
+/* =========================
+   PLAY VIDEO + PROGRESS
+========================= */
+function playVideo(videoId) {
+
+  currentVideo = videoId;
+
+  main.innerHTML = `
+    <div class="fw-media">
+      <iframe
+        id="ytPlayer"
+        src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1"
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+
+      <div class="fw-overlay">
+        <div class="fw-progress">
+          <div class="fw-progress-bar" id="fwProgress"></div>
+        </div>
+        <div class="fw-controls">
+          <span id="fwTime">00:00</span>
+          <span>Playing</span>
+        </div>
+      </div>
+    </div>
+  `;
+
+  simulateProgress();
+}
+
+/* =========================
+   FAKE LONG VIDEO PROGRESS
+========================= */
+function simulateProgress() {
+
+  let progress = 0;
+  const progressBar = document.getElementById("fwProgress");
+  const time = document.getElementById("fwTime");
+
+  clearInterval(progressInterval);
+
+  progressInterval = setInterval(() => {
+    progress += 0.5;
+
+    if (progress >= 100) {
+      clearInterval(progressInterval);
+      autoNextVideo();
+    }
+
+    progressBar.style.width = progress + "%";
+
+    let seconds = Math.floor(progress * 1.2);
+    let min = String(Math.floor(seconds / 60)).padStart(2, '0');
+    let sec = String(seconds % 60).padStart(2, '0');
+
+    time.textContent = `${min}:${sec}`;
+
+  }, 200);
+}
+
+/* =========================
+   AUTO NEXT VIDEO (LIKE PLAYLIST)
+========================= */
+function autoNextVideo() {
+
+  let currentIndex = [...thumbs].findIndex(t =>
+    t.dataset.video === currentVideo
+  );
+
+  let nextIndex = (currentIndex + 1) % thumbs.length;
+  let nextThumb = thumbs[nextIndex];
+
+  nextThumb.click(); // trigger next
+}
+
 // =====================================================
 
 // ================= REEL SECTION ======================
@@ -275,7 +354,7 @@ reelPhones.forEach(phone => {
 
 // =====================================================
 
-// ================= LONG VIDEO SECTION ======================
+// ================= BRAND VIDEO SECTION ======================
 const lfmVideos = document.querySelectorAll(".lfm-media");
 
 lfmVideos.forEach(media => {
