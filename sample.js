@@ -368,10 +368,13 @@ cards.forEach(card => {
       // Pause all other videos
       document.querySelectorAll(".lfm-video").forEach(v => {
         v.pause();
+        v.currentTime = 0;
         v.parentElement.classList.remove("playing");
       });
 
+      video.muted = false;   // 🔥 enable sound
       video.play();
+
       card.classList.add("playing");
 
     } else {
