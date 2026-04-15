@@ -33,6 +33,15 @@
    ========================================================= */
 
 /* ================= AUTHORITY HERO ================= */
+.hero-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #777;
+  margin-top: 18px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .authority-hero {
   padding: 140px 6% 120px;
@@ -47,8 +56,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
+     linear-gradient(rgba(0,0,0,0.015) 1px, transparent 1px),
+     linear-gradient(90deg, rgba(0,0,0,0.015) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
 }
@@ -91,7 +100,9 @@
 
 .authority-heading h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(42px, 5vw, 64px);
+  font-size: clamp(38px, 4.5vw, 56px);
+  max-width: 850px;
+  margin: auto;
   color: #1a1a1a;
   line-height: 1.25;
 }
@@ -124,15 +135,40 @@
   gap: 50px;
 }
 
+.trust-line {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+.primary-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #d32f2f;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #b71c1c;
+}
+
 .stat-card {
-  padding: 40px 30px;
+  background: #ffffff;
   border-radius: 20px;
-  transition: all 0.35s ease;
-  position: relative;
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
 }
 
 .stat-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.1);
 }
 
 .stat-card:hover::before {
@@ -842,35 +878,12 @@
   pointer-events:none;
 }
 
-@keyframes shineSweep{
-  0%{
-    transform:translateX(-100%);
-    opacity:0;
-  }
-  50%{
-    opacity:1;
-  }
-  100%{
-    transform:translateX(100%);
-    opacity:0;
-  }
-}
 /* ================= CONTINUOUS CARD MOTION ================= */
 
 .usp-card{
   animation:
     cardReveal 0.9s ease forwards,
     cardBreath 6s ease-in-out infinite;
-}
-
-/* Slight breathing motion */
-@keyframes cardBreath{
-  0%,100%{
-    transform:translateY(0);
-  }
-  50%{
-    transform:translateY(-6px);
-  }
 }
 
 /* ================= ICON CONTINUOUS FLOAT ================= */
