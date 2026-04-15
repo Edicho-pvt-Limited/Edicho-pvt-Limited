@@ -355,23 +355,31 @@ reelPhones.forEach(phone => {
 // =====================================================
 
 // ================= BRAND VIDEO SECTION ======================
-const lfmVideos = document.querySelectorAll(".lfm-media");
+const cards = document.querySelectorAll(".lfm-media");
 
-lfmVideos.forEach(media => {
+cards.forEach(card => {
 
-  media.addEventListener("click", function(){
+  const video = card.querySelector("video");
 
-    const videoId = media.dataset.video;
+  card.addEventListener("click", () => {
 
-    media.innerHTML = `
-      <iframe 
-        src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
-        frameborder="0"
-        allow="autoplay; encrypted-media; picture-in-picture"
-        allowfullscreen
-        style="width:100%; height:100%; border-radius:12px;">
-      </iframe>
-    `;
+    if(video.paused) {
+
+      // Pause all other videos
+      document.querySelectorAll(".lfm-video").forEach(v => {
+        v.pause();
+        v.parentElement.classList.remove("playing");
+      });
+
+      video.play();
+      card.classList.add("playing");
+
+    } else {
+
+      video.pause();
+      card.classList.remove("playing");
+
+    }
 
   });
 
