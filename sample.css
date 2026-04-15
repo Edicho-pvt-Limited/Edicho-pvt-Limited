@@ -700,11 +700,12 @@
 /* GRID */
 .lfm-grid {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  justify-content: flex-start;
+  gap: 24px;
   overflow-x: auto;
   padding: 10px 0 20px;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
 
 .lfm-grid::-webkit-scrollbar {
@@ -713,14 +714,15 @@
 
 /* CARD */
 .lfm-card {
-  min-width: 260px;
-  max-width: 260px;
-  flex: 0 0 auto;
   background: #fff;
   border-radius: 18px;
   padding: 14px;
   transition: all 0.3s ease;
   box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  min-width: 260px;
+  max-width: 260px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
 }
 
 .lfm-card:hover {
@@ -884,6 +886,20 @@
 
 .lfm-cta:hover::after {
   width: 110%;
+}
+
+@media (max-width: 768px) {
+
+  .lfm-grid {
+    gap: 16px;
+    padding-left: 10px;
+  }
+
+  .lfm-card {
+    min-width: 80%;   /* 🔥 big card on mobile */
+    max-width: 80%;
+  }
+
 }
 
 /* RESPONSIVE */
