@@ -2295,7 +2295,7 @@ background:#000;
 .test-local-video{
 width:100%;
 height:100%;
-object-fit:cover;
+object-fit:contain;
 display:block;
 background:#000;
 transition:.4s;
