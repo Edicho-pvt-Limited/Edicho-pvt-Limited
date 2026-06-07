@@ -1605,7 +1605,7 @@
 /* ====================================================== */
 
 /* ================= SLIDER ================= */
-.testimonial-premium{
+/* .testimonial-premium{
   padding:140px 6%;
   background:#ffffff;
 }
@@ -1628,10 +1628,10 @@
   font-size:clamp(36px,4vw,52px);
   color:#111;
   margin-top:15px;
-}
+} */
 
 /* STAGE */
-.testimonial-stage{
+/* .testimonial-stage{
   max-width:1100px;
   margin:auto;
   overflow:hidden;
@@ -1654,10 +1654,10 @@
   object-fit:cover;
   border-radius:22px;
   box-shadow:0 35px 70px rgba(0,0,0,0.12);
-}
+} */
 
 /* OVERLAY */
-.card-overlay{
+/* .card-overlay{
   position:absolute;
   inset:0;
   background:linear-gradient(to top, rgba(0,0,0,0.35), transparent);
@@ -1671,10 +1671,10 @@
 
 .testimonial-card:hover .card-overlay{
   opacity:1;
-}
+} */
 
 /* PLAY */
-.play-circle{
+/* .play-circle{
   width:90px;
   height:90px;
   border:2px solid #fff;
@@ -1690,10 +1690,10 @@
   border-left:22px solid #fff;
   border-top:14px solid transparent;
   border-bottom:14px solid transparent;
-}
+} */
 
 /* DOTS */
-.testimonial-nav{
+/* .testimonial-nav{
   display:flex;
   justify-content:center;
   gap:14px;
@@ -1708,10 +1708,10 @@
 
 .testimonial-nav span.active{
   background:#d32f2f;
-}
+} */
 
 /* MODAL */
-.testimonial-modal{
+/* .testimonial-modal{
   position:fixed;
   inset:0;
   display:none;
@@ -1752,11 +1752,11 @@
   color:#fff;
   font-size:22px;
   cursor:pointer;
-}
+} */
 
 /* MOBILE */
 /* ================= MOBILE VIDEO FIX ================= */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
   .testimonial-stage{
     padding: 0 10px;
@@ -1772,15 +1772,15 @@
     object-fit: cover;
     object-position: center;      
     border-radius: 18px;
-  }
+  } */
 
   /* Softer shadow on mobile */
-  .testimonial-card img{
+  /* .testimonial-card img{
     box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-  }
+  } */
 
   /* Overlay always slightly visible (premium feel) */
-  .card-overlay{
+  /* .card-overlay{
     opacity: 1;
     background: linear-gradient(
       to top,
@@ -1788,10 +1788,10 @@
       rgba(0,0,0,0.1),
       transparent
     );
-  }
+  } */
 
   /* Smaller Play Button */
-  .play-circle{
+  /* .play-circle{
     width: 64px;
     height: 64px;
     border-width: 1.8px;
@@ -1803,14 +1803,14 @@
     border-left: 16px solid #fff;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-  }
+  } */
 
   /* Reduce spacing */
-  .testimonial-nav{
+  /* .testimonial-nav{
     margin-top: 24px;
   }
 
   .testimonial-premium{
     padding: 90px 5%;
   }
-}
+} */
