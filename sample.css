@@ -567,6 +567,10 @@
 .reel-showcase {
   padding: 100px 6%;
   background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .reel-header {

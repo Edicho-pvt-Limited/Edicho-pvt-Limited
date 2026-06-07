@@ -68,6 +68,20 @@ const overlay = document.getElementById("menuOverlay");
 
 let menuOpen = false;
 
+if(menuIcon){
+
+  menuIcon.addEventListener("click", () => {
+    menuOpen ? closeMenu() : openMenu();
+  });
+
+  menuIcon.addEventListener("mouseenter", () => {
+    if(window.innerWidth <= 768){
+      openMenu();
+    }
+  });
+
+}
+
 // OPEN MENU
 function openMenu(){
   sideMenu.style.right = "0";
@@ -340,7 +354,7 @@ reelPhones.forEach(phone => {
     // Play selected video
     frame.innerHTML = `
       <iframe 
-        src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&rel=0"
+        src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
         frameborder="0"
         allow="autoplay; encrypted-media; picture-in-picture"
         allowfullscreen
