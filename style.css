@@ -141,6 +141,52 @@ html{
   opacity: 0;
 }
 
+.nav-right{
+  display:flex;
+  align-items:center;
+}
+
+.desktop-menu{
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.desktop-menu a{
+  text-decoration:none;
+  color:#111;
+  font-weight:600;
+  transition:.3s;
+}
+
+.desktop-menu a:hover{
+  color:#d32f2f;
+}
+
+/* Desktop */
+@media (min-width:769px){
+
+  .desktop-menu{
+    display:flex !important;
+  }
+
+  .menu-icon{
+    display:none !important;
+  }
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+  .desktop-menu{
+    display:none !important;
+  }
+
+  .menu-icon{
+    display:block !important;
+  }
+}
+
 /* ============================================================
    FIX FOR SMALL DEVICES (< 375px)
    ============================================================ */

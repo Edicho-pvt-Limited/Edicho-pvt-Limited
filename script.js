@@ -68,6 +68,20 @@ const overlay = document.getElementById("menuOverlay");
 
 let menuOpen = false;
 
+if(menuIcon){
+
+  menuIcon.addEventListener("click", () => {
+    menuOpen ? closeMenu() : openMenu();
+  });
+
+  menuIcon.addEventListener("mouseenter", () => {
+    if(window.innerWidth <= 768){
+      openMenu();
+    }
+  });
+
+}
+
 // OPEN MENU
 function openMenu(){
   sideMenu.style.right = "0";
