@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Edicho | Content Plan &amp; Pricing</title>
+    <meta name="theme-color" content="#f7f7f5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --red: #e50914;
+            --red2: #ff3340;
+            --black: #111111;
+            --gray: #666;
+            --light: #f7f7f5;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: var(--light);
+            color: var(--black);
+            overflow-x: hidden;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 78px;
+            padding: 0 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(247,247,245,.85);
+            backdrop-filter: blur(18px);
+            z-index: 999;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--red);
+        }
+
+        .nav-btn {
+            padding: 12px 22px;
+            border-radius: 50px;
+            background: var(--black);
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+            padding: 140px 7% 80px;
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .mini-title {
+            color: var(--red);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(58px, 8vw, 110px);
+            line-height: .88;
+            letter-spacing: -6px;
+            font-weight: 900;
+        }
+
+        .hero h1 span {
+            color: var(--red);
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        .hero p {
+            color: var(--gray);
+            max-width: 540px;
+            line-height: 1.8;
+            margin-top: 18px;
+            font-size: 15px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .red-btn {
+            background: var(--red);
+            color: white;
+            box-shadow: 0 12px 30px rgba(229,9,20,.25);
+        }
+
+        .red-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 35px rgba(229,9,20,.35);
+        }
+
+        .black-btn {
+            background: white;
+            border: 1px solid #ddd;
+            color: var(--black);
+        }
+
+        /* ================= VISUAL ================= */
+
+        .visual {
+            height: 500px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .orb {
+            position: absolute;
+            width: 390px;
+            height: 390px;
+            border-radius: 50%;
+            background: radial-gradient(
+                circle at 35% 30%,
+                #ff5a63,
+                var(--red) 45%,
+                #a90009
+            );
+            box-shadow:
+                25px 30px 50px rgba(0,0,0,.16),
+                inset -25px -25px 45px rgba(0,0,0,.18),
+                inset 15px 15px 35px rgba(255,255,255,.25);
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .brand-box {
+            width: 300px;
+            height: 190px;
+            background: linear-gradient(145deg,#222,#050505);
+            border-radius: 30px;
+            position: relative;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-8deg);
+            box-shadow: 25px 35px 45px rgba(0,0,0,.3);
+        }
+
+        .brand-box h3 {
+            color: white;
+            font-size: 45px;
+            font-weight: 900;
+            letter-spacing: -3px;
+        }
+
+        .brand-box h3 span {
+            color: var(--red);
+        }
+
+        .floating-card {
+            position: absolute;
+            background: rgba(255,255,255,.92);
+            backdrop-filter: blur(15px);
+            padding: 16px 20px;
+            border-radius: 18px;
+            box-shadow: 0 20px 40px rgba(0,0,0,.12);
+            font-size: 12px;
+            font-weight: 800;
+            z-index: 7;
+        }
+
+        .card-one {
+            top: 55px;
+            right: 20px;
+            transform: rotate(8deg);
+        }
+
+        .card-two {
+            bottom: 60px;
+            left: 10px;
+            transform: rotate(-8deg);
+        }
+
+        @keyframes float {
+            0%,100% {
+                transform: translateY(0) rotate(0);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        /* ================= PRICING ================= */
+
+        .pricing-section {
+            padding: 120px 7%;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .section-head {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-head small {
+            color: var(--red);
+            font-weight: 800;
+            letter-spacing: 3px;
+            font-size: 12px;
+        }
+
+        .section-head h2 {
+            font-size: clamp(45px,6vw,80px);
+            letter-spacing: -4px;
+            margin-top: 12px;
+            font-weight: 900;
+        }
+
+        .section-head h2 span {
+            color: var(--red);
+        }
+
+        /* PACKAGE BUTTONS */
+
+        .package-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 45px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 14px 24px;
+            border-radius: 50px;
+            border: 1px solid #ddd;
+            background: white;
+            font-family: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .tab-btn:hover,
+        .tab-btn.active {
+            background: var(--black);
+            color: white;
+            border-color: var(--black);
+        }
+
+        /* PACKAGE CARD */
+
+        .pricing-container {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .pricing-card {
+            display: none;
+            background: var(--light);
+            border: 1px solid #e5e5e5;
+            border-radius: 30px;
+            padding: 55px;
+            animation: fade .4s ease;
+        }
+
+        .pricing-card.active {
+            display: block;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .package-label {
+            color: var(--red);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .pricing-card h3 {
+            font-size: clamp(40px,5vw,65px);
+            letter-spacing: -3px;
+            margin: 12px 0;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--red);
+            letter-spacing: -2px;
+            margin-bottom: 8px;
+        }
+
+        .price span {
+            font-size: 16px;
+            color: var(--gray);
+            font-weight: 600;
+            letter-spacing: 0;
+        }
+
+        .package-description {
+            color: var(--gray);
+            margin: 20px 0 30px;
+            line-height: 1.7;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .feature {
+            background: white;
+            padding: 16px 18px;
+            border-radius: 14px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid #eee;
+        }
+
+        .feature::before {
+            content: "✓";
+            color: var(--red);
+            font-weight: 900;
+            margin-right: 10px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 16px 28px;
+            background: var(--red);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            box-shadow: 0 12px 30px rgba(229,9,20,.25);
+        }
+
+        footer {
+            padding: 28px 7%;
+            background: #111;
+            color: #777;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        footer span {
+            color: var(--red);
+        }
+
+
+        /* ================= OUR WORK / SAMPLES ================= */
+        .samples-section { padding: 110px 7%; background: var(--light); }
+        .samples-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+        .sample-card { background: white; border: 1px solid #e8e8e8; border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 12px 35px rgba(0,0,0,.04); transition: transform .25s, box-shadow .25s; }
+        .sample-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(0,0,0,.09); }
+        .sample-type { display: inline-block; width: fit-content; padding: 7px 11px; border-radius: 30px; background: #fff0f1; color: var(--red); font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+        .sample-card h3 { font-size: 20px; letter-spacing: -.5px; }
+        .sample-card p { color: var(--gray); font-size: 13px; line-height: 1.6; flex-grow: 1; }
+        .sample-link { display: inline-flex; align-items: center; justify-content: center; padding: 12px 18px; border-radius: 40px; background: var(--black); color: white; text-decoration: none; font-size: 13px; font-weight: 800; transition: background .2s; }
+        .sample-link:hover { background: var(--red); }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width:850px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding-top: 130px;
+                gap: 20px;
+            }
+
+            .hero p {
+                margin: 18px auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .visual {
+                height: 380px;
+            }
+
+            .orb {
+                width: 280px;
+                height: 280px;
+            }
+
+            .brand-box {
+                width: 230px;
+                height: 145px;
+            }
+
+            .brand-box h3 {
+                font-size: 35px;
+            }
+
+            .pricing-section {
+                padding: 90px 5%;
+            }
+
+            .pricing-card {
+                padding: 35px 25px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .samples-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .samples-section { padding: 85px 5%; }
+        }
+
+        @media(max-width:500px) {
+
+            nav {
+                padding: 0 5%;
+                height: 68px;
+            }
+
+            .nav-btn {
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            .hero {
+                padding: 110px 5% 50px;
+                min-height: auto;
+            }
+
+            .hero h1 {
+                letter-spacing: -4px;
+            }
+
+            .hero h2 {
+                font-size: 19px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .visual {
+                height: 330px;
+            }
+
+            .floating-card {
+                font-size: 10px;
+                padding: 12px 14px;
+            }
+
+            .card-one {
+                right: 0;
+            }
+
+            .card-two {
+                left: 0;
+            }
+
+            .package-tabs {
+                gap: 8px;
+            }
+
+            .tab-btn {
+                padding: 11px 16px;
+                font-size: 12px;
+            }
+
+            .section-head h2 {
+                letter-spacing: -2px;
+            }
+
+            .price {
+                font-size: 40px;
+            }
+
+            .samples-grid { grid-template-columns: 1fr; }
+            .samples-section { padding: 75px 5%; }
+        }
+
+    
+        /* Updated samples and subscription portal */
+        .sample-tabs { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin:0 auto 32px; }
+        .sample-tab { padding:13px 21px; border:1px solid #ddd; border-radius:40px; background:#fff; font:700 13px Inter,sans-serif; cursor:pointer; transition:.2s; }
+        .sample-tab.active,.sample-tab:hover { background:#111; color:#fff; border-color:#111; }
+        .sample-group { display:none; max-width:1100px; margin:0 auto; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+        .sample-group.active { display:grid; }
+        .subscribe-cta { text-align:center; margin:55px auto 0; padding:38px 20px; max-width:800px; background:#fff; border:1px solid #eee; border-radius:24px; }
+        .subscribe-cta h3 { font-size:clamp(25px,4vw,36px); margin-bottom:10px; }
+        .subscribe-cta p { color:#666; margin-bottom:22px; }
+        .subscribe-cta .contact-btn,.submit-plan { border:0; cursor:pointer; font:800 14px Inter,sans-serif; }
+        .subscribe-modal { display:none; position:fixed; inset:0; z-index:2000; background:rgba(0,0,0,.65); padding:20px; overflow-y:auto; align-items:center; justify-content:center; }
+        .subscribe-modal.open { display:flex; }
+        .subscribe-panel { position:relative; width:min(100%,500px); background:#fff; border-radius:24px; padding:34px; box-shadow:0 25px 80px rgba(0,0,0,.25); }
+        .subscribe-panel h2 { font-size:30px; margin:10px 0 6px; letter-spacing:-1px; }
+        .portal-note { color:#666; font-size:13px; margin-bottom:22px; }
+        .subscribe-panel form { display:flex; flex-direction:column; gap:9px; }
+        .subscribe-panel label { font-size:13px; font-weight:700; margin-top:7px; }
+        .subscribe-panel input,.subscribe-panel select { width:100%; padding:14px 13px; border:1px solid #ddd; border-radius:11px; font:14px Inter,sans-serif; background:#fff; color:#111; }
+        .subscribe-panel input:focus,.subscribe-panel select:focus { outline:2px solid rgba(229,9,20,.18); border-color:#e50914; }
+        .submit-plan { margin-top:14px; width:100%; text-align:center; }
+        .small-note { margin:16px 0 0; font-size:11px; line-height:1.5; }
+        .modal-close { position:absolute; top:12px; right:16px; border:0; background:transparent; font-size:30px; cursor:pointer; color:#555; }
+        @media(max-width:850px) { .sample-group.active { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+        @media(max-width:500px) { .sample-group.active { grid-template-columns:1fr; } .subscribe-panel { padding:28px 22px; } .sample-tab { padding:11px 14px; font-size:12px; } }
+
+    
+        /* Responsive layout and iPhone Safari support */
+        html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: 86px; }
+        body { min-width: 320px; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+        button, input, select, a { touch-action: manipulation; }
+        button, input, select { -webkit-appearance: none; appearance: none; }
+        nav { padding-left: max(5%, env(safe-area-inset-left)); padding-right: max(5%, env(safe-area-inset-right)); }
+        .hero, .pricing-section, .samples-section { overflow-wrap: anywhere; }
+        .pricing-card, .sample-card, .subscribe-panel { min-width: 0; }
+        .sample-link, .contact-btn, .btn, .nav-btn, .sample-tab { min-height: 44px; }
+        .subscribe-modal { padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom)); }
+        .subscribe-panel { max-height: calc(100dvh - 24px); overflow-y: auto; -webkit-overflow-scrolling: touch; }
+        .subscribe-panel input, .subscribe-panel select { font-size: 16px; }
+        @supports not (height: 100dvh) { .subscribe-panel { max-height: calc(100vh - 24px); } }
+        @media (max-width: 850px) {
+          .hero { min-height: auto; }
+          .visual { width: 100%; overflow: hidden; }
+          .samples-grid, .sample-group.active { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 600px) {
+          nav { height: 64px; }
+          .hero { padding-top: 100px; }
+          .hero h1 { font-size: clamp(48px, 14vw, 72px); }
+          .hero h2 { line-height: 1.35; }
+          .visual { height: 300px; }
+          .orb { width: min(70vw, 260px); height: min(70vw, 260px); }
+          .brand-box { width: min(62vw, 220px); height: 135px; }
+          .floating-card { max-width: 46%; }
+          .pricing-card { padding: 28px 20px; border-radius: 22px; }
+          .pricing-card h3 { overflow-wrap: anywhere; }
+          .price { font-size: clamp(34px, 10vw, 42px); }
+          .sample-tabs { gap: 8px; }
+          .sample-tab { flex: 1 1 100%; width: 100%; }
+          .samples-grid, .sample-group.active { grid-template-columns: 1fr; }
+          .subscribe-cta { padding: 28px 16px; }
+          .subscribe-panel { padding: 28px 20px; border-radius: 20px; }
+          .contact-btn, .submit-plan { width: 100%; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        EDICHO<span>.</span>
+    </div>
+
+    <a href="#samples" class="nav-btn">
+        View Samples
+    </a>
+
+</nav>
+
+
+
+<!-- SECTION 1 : HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="mini-title">
+            GO DIGITAL. GO EDICHO.
+        </div>
+
+        <h1>
+            Grow Your<br>
+            <span>Brand.</span>
+        </h1>
+
+        <h2>
+            Content that gets attention.
+        </h2>
+
+        <p>
+            From professional video editing and social media
+            management to complete content strategy, scripting
+            and production — Edicho helps your brand grow online.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#pricing" class="btn red-btn">
+                Explore Pricing →
+            </a>
+
+            <a href="#pricing" class="btn black-btn">
+                Choose Your Plan
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="visual">
+
+        <div class="orb"></div>
+
+        <div class="floating-card card-one">
+            🚀 GROW • CREATE • SCALE
+        </div>
+
+        <div class="floating-card card-two">
+            ✦ CONTENT THAT PERFORMS
+        </div>
+
+        <div class="brand-box">
+            <h3>EDI<span>CHO.</span></h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SECTION 2 : SINGLE PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="section-head">
+    <small>EDICHO PRICING</small>
+    <h2>One Plan. <span>Everything.</span></h2>
+  </div>
+  <div class="pricing-container">
+    <div class="pricing-card active">
+      <div class="package-label">COMPLETE CONTENT PLAN</div>
+      <h3>Complete Content Plan</h3>
+      <div class="price">₹21,000 <span>/ month</span></div>
+      <p class="package-description">Everything you need to create and manage professional content for your business.</p>
+      <div class="features">
+        <div class="feature">Professional Shooting</div>
+        <div class="feature">Professional Video Editing</div>
+        <div class="feature">Script Writing</div>
+        <div class="feature">Page Handling</div>
+      </div>
+      <a href="#samples" class="contact-btn">Explore Samples →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 : OUR WORK / SAMPLES -->
+<section class="samples-section" id="samples">
+  <div class="section-head">
+    <small>OUR WORK</small>
+    <h2>Choose <span>Samples.</span></h2>
+  </div>
+
+  <div class="sample-tabs">
+    <button class="sample-tab active" onclick="showSamples('doctors', this)">Doctors Samples</button>
+    <button class="sample-tab" onclick="showSamples('restaurants', this)">Restaurant Samples</button>
+    <button class="sample-tab" onclick="showSamples('gyms', this)">Gym Samples</button>
+  </div>
+
+  <div class="sample-group active" id="doctors">
+    <article class="sample-card"><span class="sample-type">Doctor Content</span><h3>Dr. Rutuja</h3><p>Short-form video editing sample.</p><a class="sample-link" href="https://www.instagram.com/reel/DVvrmX-kshr/?utm_source=ig_web_copy_link&amp;vrfl=MzRlODBiNWFlZA==&amp;srtk=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">Watch Sample ↗</a></article>
+    <article class="sample-card"><span class="sample-type">Doctor Content</span><h3>Dr. Rameshwar Kumar</h3><p>Doctor-focused short-form content.</p><a class="sample-link" href="https://youtube.com/shorts/Rer6dfsIrrw?si=8h2Nzkeq4m0Y6beR" target="_blank" rel="noopener noreferrer">Watch Sample ↗</a></article>
+    <article class="sample-card"><span class="sample-type">Healthcare Brand</span><h3>Tara Health Care</h3><p>Healthcare brand content sample.</p><a class="sample-link" href="https://youtube.com/shorts/y-KOfsYPtxo?si=4i50rY8xRcDWyM0T" target="_blank" rel="noopener noreferrer">Watch Sample ↗</a></article>
+  </div>
+
+  <div class="sample-group" id="restaurants">
+    <article class="sample-card"><span class="sample-type">Restaurant Content</span><h3>Restaurant Sample 1</h3><p>Add your restaurant video sample link here.</p><a class="sample-link" href="https://www.instagram.com/reel/DU3EcM9CbYz/?vrfl=Y2dmY3p1Y3V6d2Z4" target="_blank" rel="noopener noreferrer">Watch Sample ↗</a></article>
+    <article class="sample-card"><span class="sample-type">Restaurant Content</span><h3>Restaurant Sample 2</h3><p>Add your restaurant video sample link here.</p><a class="sample-link" href="https://www.instagram.com/reel/DWG3LJgCM7R/?psln=N3JqamxpbmJjYzIw" target="_blank" rel="noopener noreferrer">Watch Sample ↗</a></article>
+    <article class="sample-card"><span class="sample-type">Restaurant Content</span><h3>Restaurant Sample 3</h3><p>Add your restaurant video sample link here.</p><a class="sample-link" href="https://www.instagram.com/reel/DXdo6O3EXXP/?obrf=MXM5NXp3d3lnMjA1aQ==" target="_blank" rel="noopener noreferrer">Watch Sample ↗</a></article>
+  </div>
+
+  <div class="sample-group" id="gyms">
+    <article class="sample-card"><span class="sample-type">Gym Content</span><h3>Gym Sample 1</h3><p>Add your gym video sample link here.</p><a class="sample-link" href="https://www.instagram.com/reel/Dd-mRfUydvX/?srtk=aDEzc2FjaHhham8y" target="_blank" rel="noopener noreferrer">Watch Sample ↗</a></article>
+    <article class="sample-card"><span class="sample-type">Gym Content</span><h3>Gym Sample 2</h3><p>Add your gym video sample link here.</p><a class="sample-link" href="https://www.instagram.com/reel/DeRTJhoh5iQ/?xtok=MTkwb2ljcnd4ODlxMg==" target="_blank" rel="noopener noreferrer">Watch Sample ↗</a></article>
+    <article class="sample-card"><span class="sample-type">Gym Content</span><h3>Gym Sample 3</h3><p>Add your gym video sample link here.</p><a class="sample-link" href="https://www.instagram.com/reel/DVNRLszjHxL/?psln=ZmZvYW0xMWk4a3Fk" target="_blank" rel="noopener noreferrer">Watch Sample ↗</a></article>
+  </div>
+
+  <div class="subscribe-cta">
+    <h3>Ready to grow your business?</h3>
+    <p>Complete Content Plan — ₹21,000/month</p>
+    <button class="contact-btn" type="button" onclick="openSubscribe()">Subscribe This Plan →</button>
+  </div>
+</section>
+
+<!-- SUBSCRIPTION DETAILS PORTAL -->
+<div class="subscribe-modal" id="subscribeModal" aria-hidden="true">
+  <div class="subscribe-panel">
+    <button class="modal-close" type="button" onclick="closeSubscribe()" aria-label="Close">×</button>
+    <div class="package-label">EDICHO SUBSCRIPTION</div>
+    <h2>Subscribe This Plan</h2>
+    <p class="portal-note">Complete Content Plan · ₹21,000/month</p>
+    <form id="subscribeForm">
+      <label for="customerName">Your Name</label>
+      <input id="customerName" name="name" type="text" placeholder="Enter your name" required>
+      <label for="businessType">Business Type</label>
+      <select id="businessType" name="type" required>
+        <option value="">Select business type</option>
+        <option value="Doctor">Doctor</option>
+        <option value="Restaurant">Restaurant</option>
+        <option value="Gym">Gym</option>
+      </select>
+      <label for="customerNumber">Phone Number</label>
+      <input id="customerNumber" name="number" type="tel" inputmode="tel" placeholder="Enter your phone number" required>
+      <label for="customerLocation">Location</label>
+      <input id="customerLocation" name="location" type="text" placeholder="City / area" required>
+      <button class="contact-btn submit-plan" type="submit">Subscribe This Plan →</button>
+    </form>
+    <p class="portal-note small-note">Your details will be prepared in WhatsApp for sending to Edicho.</p>
+  </div>
+</div>
+
+<footer id="contact">
+    © 2026 <span>EDICHO</span> — Go Digital. Go Edicho.
+</footer>
+
+
+
+<script>
+
+
+
+
+function showSamples(groupId, button) {
+  document.querySelectorAll(".sample-group").forEach(group => group.classList.remove("active"));
+  document.querySelectorAll(".sample-tab").forEach(tab => tab.classList.remove("active"));
+  document.getElementById(groupId).classList.add("active");
+  button.classList.add("active");
+}
+function openSubscribe() {
+  document.body.style.overflow = "hidden";
+  const modal = document.getElementById("subscribeModal");
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+}
+function closeSubscribe() {
+  const modal = document.getElementById("subscribeModal");
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+document.getElementById("subscribeModal").addEventListener("click", function(event) {
+  if (event.target === this) closeSubscribe();
+});
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") closeSubscribe();
+});
+document.getElementById("subscribeForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const name = document.getElementById("customerName").value.trim();
+  const type = document.getElementById("businessType").value;
+  const number = document.getElementById("customerNumber").value.trim();
+  const location = document.getElementById("customerLocation").value.trim();
+  const message = `Edicho Plan Subscription
+Plan: Complete Content Plan - ₹21,000/month
+Name: ${name}
+Business Type: ${type}
+Phone: ${number}
+Location: ${location}`;
+  const whatsappUrl = "https://wa.me/917250815788?text=" + encodeURIComponent(message);
+  const opened = window.open(whatsappUrl, "_blank");
+  if (!opened) window.location.href = whatsappUrl;
+});
+
+</script>
+
+</body>
+</html>
